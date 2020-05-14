@@ -1,0 +1,8 @@
+﻿@model Univer.PlanTask.Web.Models.User
+
+@if (Model != null)
+{
+    <a href="#">
+        @Model.FirstName @Model.SecondName <span class="badge">@Model.Tasks.Count</span>
+    </a>
+}

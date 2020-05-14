@@ -1,0 +1,23 @@
+﻿@model TaskStatus
+@using Univer.PlanTask.Web.Models;
+
+@{
+    var text = "Новая";
+    var cssClass = "label-info";
+    if (Model == TaskStatus.Done)
+    {
+        text = "Успех";
+        cssClass = "label-success";
+    }
+    else if (Model == TaskStatus.Fail)
+    {
+        text = "Провал";
+        cssClass = "label-danger";
+    }
+}
+
+<h4>
+    <span class="label @cssClass">
+        @text
+    </span>
+</h4>

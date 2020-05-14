@@ -1,0 +1,7 @@
+﻿@model Double
+@using System.Globalization
+@{
+    var name = ViewData.TemplateInfo.GetFullHtmlFieldName("");
+}
+
+<input type="text" name="@name" class="form-control" value="@Model" />

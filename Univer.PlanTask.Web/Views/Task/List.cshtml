@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Univer.PlanTask.Web.Models.Task>
+
+@{
+    var ajaxOptions = new AjaxOptions()
+    {
+        UpdateTargetId = "DivSearchResult"
+    };
+
+}
+
+<hr />
+@using (Ajax.BeginForm("SearchResult", ajaxOptions))
+{
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Go!</button>
+                </span>
+                <input type="text" name="search" value="@ViewBag.Search" class="form-control" placeholder="Поиск...">
+            </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+    </div><!-- /.row -->
+}
+
+<br />
+
+<div id="DivSearchResult">
+    @Html.Partial("SearchResult")
+</div>
+
